@@ -1,16 +1,20 @@
-# chat_app
+# 💬 Chat App - Clean Architecture (Flutter + Firebase)
 
-A new Flutter project.
+A production-ready chat application built using Flutter and Firebase, following Clean Architecture principles.  
+This project is part of my journey to master Flutter development with well-structured, scalable code.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features (In Progress)
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ Login & Register UI
+- ✅ Navigation with toggle function
+- 🔄 Firebase Authentication (in progress)
+- 🔜 Realtime chat with Firebase Firestore
+- 🔜 User presence & online status
+- 🔜 Message sending, reading, and status
+- 🔜 Clean Architecture: `features/`, `config/`, `themes/`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📁 Project Structure
