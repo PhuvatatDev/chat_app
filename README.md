@@ -9,7 +9,10 @@ This project is part of my journey to master Flutter development with well-struc
 
 - ✅ Login & Register UI
 - ✅ Navigation with toggle function
-- 🔄 Firebase Authentication (in progress)
+- ✅ Firebase project configured (FlutterFire CLI)
+- ✅ Firebase initialized in main.dart
+- ✅ App builds and runs with Firebase enabled
+- 🔄 Firebase Authentication logic (in progress)
 - 🔜 Realtime chat with Firebase Firestore
 - 🔜 User presence & online status
 - 🔜 Message sending, reading, and status

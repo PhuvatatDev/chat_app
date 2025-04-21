@@ -58,3 +58,8 @@ ios/Runner/GoogleService-Info.plist
 *.supabase
 .supabase/
 
+# Firebase auto-generated config (re-généré par flutterfire configure)
+lib/firebase_options.dart
+
+# VS Code
+.vscode/

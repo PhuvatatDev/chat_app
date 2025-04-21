@@ -7,12 +7,10 @@ class RegisterPage extends StatelessWidget {
   final TextEditingController _pwController = TextEditingController();
   final TextEditingController _confirmPwController = TextEditingController();
 
-    // tap to go to login page
+  // tap to go to login page
   final void Function()? onTap;
 
   RegisterPage({super.key, required this.onTap});
-
-
 
   // Register methode
   void register() {}
