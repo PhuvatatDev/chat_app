@@ -1,4 +1,4 @@
-import 'package:chat_app/auth/auth_service.dart';
+import 'package:chat_app/services/auth/auth_service.dart';
 import 'package:chat_app/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 import '../components/my_button.dart';
@@ -13,36 +13,35 @@ class RegisterPage extends StatelessWidget {
 
   RegisterPage({super.key, required this.onTap});
 
-  // Register methode
-  void register(BuildContext context) {
-    // get auth service
+  //  Rendre la méthode async
+  Future<void> register(BuildContext context) async {
     final auth = AuthService();
-    // password match -> create user
-    if(_pwController.text == _confirmPwController.text){
+
+    if (_pwController.text == _confirmPwController.text) {
       try {
-        auth.signUpWithEmailPassword(
-      _emailController.text, 
-      _pwController.text
-      );
-      } catch(e) {
-        showDialog(
-        // ignore: use_build_context_synchronously
-        context: context, 
-        builder: (context) => AlertDialog(
-         title: Text(e.toString()),
-      ),);
+        // Attendre la réponse de Firebase
+        await auth.signUpWithEmailPassword(
+          _emailController.text,
+          _pwController.text,
+        );
+      } catch (e) {
+        if (context.mounted) {
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: Text(e.toString()),
+            ),
+          );
+        }
       }
-    }
-    // password dont match -> tell user to fix it
-    else {
+    } else {
       showDialog(
-        // ignore: use_build_context_synchronously
-        context: context, 
+        context: context,
         builder: (context) => const AlertDialog(
-         title: Text("Password dont match! please fix it"),
-      ),);
+          title: Text("Password don't match! Please fix it."),
+        ),
+      );
     }
-    
   }
 
   @override
