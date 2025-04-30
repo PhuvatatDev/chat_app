@@ -1,25 +1,68 @@
-# 💬 Chat App - Clean Architecture (Flutter + Firebase)
+# 💬 Chat App - Flutter + Firebase
 
-A chat application built using Flutter and Firebase, following Clean Architecture principles.  
-This project is part of my journey to **learn how to structure my code properly** and **master Flutter development**.  
-I am following a tutorial to help me **practice professional code organization** and **build production-ready apps** step by step.
+This project is a messaging application built with **Flutter** and **Firebase**.
+
+I followed a YouTube tutorial by **Mitch Koko** to learn how to structure my code properly in a real-world Flutter app.  
+While this isn’t a full Clean Architecture setup, the code is clean, modular, and well organized.
+
+✅ **Tutorial completed.**  
+This marks the end of the learning journey for this chat application.
 
 ---
 
-## 🚀 Features (Work in Progress)
+## 🎯 Purpose
 
-- ✅ Login & Register UI (with authentication toggle)
-- ✅ Firebase project setup (configured with FlutterFire CLI)
-- ✅ Firebase initialization inside `main.dart`
-- ✅ App builds and connects to Firebase successfully
-- 🔄 Firebase Authentication (sign-in & sign-up logic - in progress)
-- 🔜 Real-time chat with Firestore
-- 🔜 User presence & online status
-- 🔜 Sending, reading, and displaying messages
-- 🔜 Clean Architecture folder structure: `features/`, `config/`, `themes/`
+The main goal of this project was to **master real-time messaging with Firebase**, and learn how to:
+
+- Organize and modularize Flutter code
+- Work with Firebase Authentication and Firestore
+- Implement chat and user interaction logic
+- Stream and display real-time data using `StreamBuilder`
+
+---
+
+## 🚀 Features
+
+### 🔐 Authentication
+- Email & password login and registration
+- Firebase Authentication integrated
+
+### 💬 Chat System
+- Send and receive real-time messages with Firestore
+- Auto-updating message list with `StreamBuilder`
+- Custom `ChatBubble` UI widget
+- Unique chat room ID generation between two users
+
+### 👥 User Management
+- Display a list of all users (excluding self)
+- Navigate to private one-on-one chat
+- Block / Unblock users
+- Filter out blocked users from chat list
+- Dedicated blocked users screen with unblock action
+
+### 🚨 Moderation
+- Report messages (stored in a `Reports` collection in Firestore)
+
+---
+
+## 🧠 What I Learned
+
+- Working with **Firebase Firestore streams**
+- Structuring a Flutter project into **components, pages, and services**
+- Handling **real-time user interactions**
+- Designing backend logic with clean frontend interaction
+- Debugging real-world Flutter issues (`RangeError`, async handling, etc.)
 
 ---
 
 ## 📁 Project Structure
 
-lib/ ├── components/ # Reusable UI widgets (buttons, textfields, user tiles) ├── models/ # Data models (e.g., Message) ├── pages/ # Screens/pages (home, chat, login, register, settings) ├── services/ # Business logic (auth and chat services) ├── theme/ # App themes (light mode, colors) ├── firebase_options.dart # Firebase configuration file └── main.dart # Entry point of the application
+```bash
+/lib
+├── components/       # Reusable UI widgets (user_tile, chat_bubble)
+├── models/           # Data models (Message)
+├── pages/            # UI pages (home, login, register, chat, blocked)
+├── services/
+│   ├── auth/         # Firebase Auth logic
+│   └── chat/         # Chat logic: messaging, blocking, reporting
+└── main.dart         # App entry point
