@@ -1,0 +1,2 @@
+C:/Users/szent/Repositories/chat_app/android/app/.cxx/Debug/2z01k205/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/szent/Repositories/chat_app/android/app/.cxx/Debug/2z01k205/armeabi-v7a/CMakeFiles/rebuild_cache.dir
